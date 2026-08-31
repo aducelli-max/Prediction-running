@@ -1,0 +1,18 @@
+# Empêcher les gros fichiers
+mon_projet_streamlit/gitimore/
+Base_coureurs/
+Archive/
+
+# Empêcher les fichiers compilés
+__pycache__/
+*.pyc
+
+# Empêcher les environnements
+env/
+venv/
+
+# Empêcher les CSV lourds
+*.csv
+
+# Empêcher les binaires
+*.pyd
