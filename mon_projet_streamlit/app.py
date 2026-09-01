@@ -53,7 +53,7 @@ if st.session_state.page == "home":
     # ---------------------
     # CHARGEMENT DES DONNÉES
     # ---------------------
-    df = pd.read_csv("ml/activities_with_weather_harmonized.csv")
+    df = pd.read_csv("activities_with_weather_harmonized.csv")
 
     df["start_date"] = pd.to_datetime(df["start_date"], utc=True)
     df["start_date_local"] = pd.to_datetime(df["start_date_local"], utc=True)
