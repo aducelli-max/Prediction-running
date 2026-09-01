@@ -54,6 +54,7 @@ if st.session_state.page == "home":
     # CHARGEMENT DES DONNÉES
     # ---------------------
     df = pd.read_csv("activities_with_weather_harmonized.csv")
+
     df["start_date"] = pd.to_datetime(df["start_date"], utc=True)
     df["start_date_local"] = pd.to_datetime(df["start_date_local"], utc=True)
 
@@ -421,6 +422,7 @@ if st.session_state.page == "prediction":
         delta_hr * 0.2 +
         delta_time * 0.1
     )
+    score_meteo = max(0, min(100, abs(impact_meteo)))
 
     color = folium_color(impact_meteo)
 
@@ -602,8 +604,6 @@ if st.session_state.page == "prediction":
         unsafe_allow_html=True
     )
     
-score_meteo = max(0, min(100, abs(impact_meteo)))
-
     # -----------------------------
     # 🔥 SCORE MÉTÉO DJ MARCLJR
     # -----------------------------
