@@ -53,12 +53,13 @@ if st.session_state.page == "home":
     # ---------------------
     # CHARGEMENT DES DONNÉES
     # ---------------------
-    df = pd.read_csv("activities_with_weather_harmonized.csv")
+    df = pd.read_csv("data/activities_with_weather_harmonized.csv")
 
     df["start_date"] = pd.to_datetime(df["start_date"], utc=True)
     df["start_date_local"] = pd.to_datetime(df["start_date_local"], utc=True)
 
-    gps = pd.read_csv("gps_points.csv")
+    gps = pd.read_csv("data/gps_points.csv")
+
 
     # ---------------------
     # MÉTÉO DU JOUR
@@ -313,7 +314,8 @@ if st.session_state.page == "prediction":
     st.title("🔮 Prédiction de performance")
     
     # --- Charger GPS ici aussi ---
-    gps = pd.read_csv("gps_points.csv")
+    gps = pd.read_csv("data/gps_points.csv")
+
 
     # --- Récupération de l'activité sélectionnée ---
     selected_activity = st.session_state.get("selected_activity", None)
