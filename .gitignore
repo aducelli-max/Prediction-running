@@ -1,2 +1,29 @@
+# Exclure les fichiers de cache
 __pycache__/
 *.pyc
+.cache.sqlite
+
+# Exclure les gros fichiers
+mon_projet_streamlit/gitimore/
+Base_coureurs/
+Archive/
+
+# Exclure les fichiers compilés
+__pycache__/
+*.pyc
+
+# Exclure les environnements
+env/
+venv/
+.env
+
+# Exclure les CSV
+*.csv
+
+# Exclure les binaires
+*.pyd
+
+# Exclure les dossiers
+gpx_running_250km/
+backgrounds/
+mon_projet_streamlit/
