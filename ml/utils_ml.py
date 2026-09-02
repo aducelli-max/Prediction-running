@@ -3,7 +3,9 @@ import pickle
 from utils.meteo import saison_meteo, moyenne_mois
 
 
-df = pd.read_csv("activities_with_weather_harmonized.csv")
+df = pd.read_csv("data/activities_with_weather_harmonized.csv")
+
+
 model = pickle.load(open("ml/model.pkl", "rb"))
 
 def predict_time(distance_km, temp, rh, precip, cloud, wind, month, hour, total_elevation_gain):

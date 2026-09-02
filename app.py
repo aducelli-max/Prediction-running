@@ -13,7 +13,8 @@ from utils.meteo_heart_rate import meteo_heart_rate
 from utils.color_pct import color_pct
 from utils.folium_color import folium_color
 from utils.meteo import get_meteo
-from strava_sync import main
+from utils.strava_sync import main
+
 
 # ---------------------
 # INITIALISATION SESSION

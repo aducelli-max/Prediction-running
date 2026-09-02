@@ -1,6 +1,6 @@
 import requests
 import pandas as pd
-from auth import refresh_tokens
+from utils.auth import refresh_tokens
 from datetime import datetime
 from utils.meteo import get_meteo, saison_meteo
 
@@ -217,12 +217,12 @@ def main():
             })
 
     gps_df = pd.DataFrame(gps_rows)
-    gps_df.to_csv("gps_points.csv", index=False)
-    print("✔️ gps_points.csv généré")
+    gps_df.to_csv("data/gps_points.csv", index=False)
+    print("✔️ data/gps_points.csv généré")
 
     # Export final
-    df_h.to_csv("activities_with_weather_harmonized.csv", index=False)
-    print("✔️ activities_with_weather_harmonized.csv généré")
+    df_h.to_csv("data/activities_with_weather_harmonized.csv", index=False)
+    print("✔️ data/activities_with_weather_harmonized.csv généré")
 
 
 if __name__ == "__main__":
